@@ -1,0 +1,30 @@
+<h1 *ngIf="alerta==true; else templateempty">Hola Clase</h1>
+<table>
+
+<tr>
+<td>nombre</td>
+<td>edad</td>
+</tr>
+<tr *ngFor="let persona of personas">
+<td>{{persona.nombre}} <span *ngIf="persona.edad>=18;else menor">es mayor de edad</span><ng-template #menor><span>es menor de edad</span></ng-template></td>
+
+
+<td>{{persona.edad}}</td>
+</tr>
+
+</table>
+
+<div [ngSwitch]="nombre">
+<p *ngSwitchCase="'Ismael'">
+Ismael
+</p>
+<p *ngSwitchCase="'Mario'">
+ Mario
+</p>
+<p *ngSwitchDefault="">
+ No tiene nombre
+</p>
+</div>
+<ng-template #templateempty>
+No tiene nombres
+</ng-template>

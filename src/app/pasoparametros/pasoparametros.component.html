@@ -1,0 +1,7 @@
+<h1>Paso parametros</h1>
+
+<p>Edad: {{edad}}</p>
+<p>Nombre: {{nombre}}</p>
+
+<button [routerLink]="['/recibirparametros', this.edad,this.nombre]" [queryParams]="{action:edad,nombre}">
+    Paso parametros</button>
